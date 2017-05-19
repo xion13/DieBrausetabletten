@@ -1,2 +1,5 @@
-Wer ist denn nun Teil der Gruppe?
-Bitte in dieser Datei die Personen mit Vor- und Nachnamen auflisten.
+Raffael Beyer
+Kamil Betlejewski
+Jonas Brinkötter
+Eritrea Tekle
+Laura Rempel
