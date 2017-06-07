@@ -25,7 +25,6 @@ public class button {
 		meinJFrame.pack();
 
 		meinJFrame.setVisible(true);
-
 	}
 
 }
