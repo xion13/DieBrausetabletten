@@ -9,13 +9,14 @@ import java.awt.event.ActionListener;
 import javax.swing.*;
 
 class Spielfeld extends JFrame {
+	
 	JButton button0;
 	JButton button1;
 	JButton button2;
 	JLabel l1;
-	//JLabel l2;
-	//JLabel l3;
-	//JLabel l4;
+	// JLabel l2;
+	// JLabel l3;
+	// JLabel l4;
 	private boolean first = true;
 	public int sc = -1;
 	public int st = -1;
@@ -28,10 +29,10 @@ class Spielfeld extends JFrame {
 		setVisible(true);
 		setLayout(new BorderLayout());
 
-		l1 = new JLabel("made by Helge233");
-		//l2 = new JLabel("SchereTest");
-		//l3 = new JLabel("SteinTest");
-		//l4 = new JLabel("PapierTest");
+		l1 = new JLabel("made by Brausetabletten");
+		// l2 = new JLabel("SchereTest");
+		// l3 = new JLabel("SteinTest");
+		// l4 = new JLabel("PapierTest");
 		button0 = new JButton("Schere");
 		button1 = new JButton("Stein");
 		button2 = new JButton("Papier");
@@ -50,11 +51,11 @@ class Spielfeld extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				sc = 0;
 				System.out.println(sc);
-				//l2.setVisible(true);
-				if(first){
+				// l2.setVisible(true);
+				if (first) {
 					Spiel.setzeS1(sc);
 					first = false;
-				}else{
+				} else {
 					Spiel.setzeS2(sc);
 					Spiel.auswerten();
 					first = true;
@@ -64,16 +65,16 @@ class Spielfeld extends JFrame {
 
 		button1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
+
 				st = 1;
 				System.out.println(st);
-				
-				//l3.setVisible(true);
-				
-				if(first){
+
+				// l3.setVisible(true);
+
+				if (first) {
 					Spiel.setzeS1(st);
 					first = false;
-				}else{
+				} else {
 					Spiel.setzeS2(st);
 					Spiel.auswerten();
 					first = true;
@@ -83,14 +84,14 @@ class Spielfeld extends JFrame {
 
 		button2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
+
 				pa = 2;
 				System.out.println(pa);
-				//l4.setVisible(true);
-				if(first){
+				// l4.setVisible(true);
+				if (first) {
 					Spiel.setzeS1(pa);
 					first = false;
-				}else{
+				} else {
 					Spiel.setzeS2(pa);
 					Spiel.auswerten();
 					first = true;
@@ -99,18 +100,19 @@ class Spielfeld extends JFrame {
 		});
 
 		background.add(l1);
-		//background.add(l2);
-		//background.add(l3);
-		//background.add(l4);
-		//l2.setVisible(false);
-		//l3.setVisible(false);
-		//l4.setVisible(false);
+		// background.add(l2);
+		// background.add(l3);
+		// background.add(l4);
+		// l2.setVisible(false);
+		// l3.setVisible(false);
+		// l4.setVisible(false);
 		background.add(button0);
 		background.add(button1);
 		background.add(button2);
 		add(background);
 		background.setLayout(new FlowLayout());
 		setSize(1920, 1080);
+		setIconImage(new ImageIcon(getClass().getResource("/Schaumspiel/brause.png")).getImage());
 	}
 
 	public static void main(String args[]) {
@@ -118,3 +120,4 @@ class Spielfeld extends JFrame {
 
 	}
 }
+
